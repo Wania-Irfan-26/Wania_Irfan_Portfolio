@@ -533,236 +533,32 @@
             flex-wrap: wrap;
         }
 
-        /* ── INTERACTIVE AI AGENT PIPELINE SHOWCASE ─────────────────── */
-        .pipeline-card {
-            margin-top: 54px;
-            background: var(--surface-glass);
-            border: 1px solid rgba(16, 185, 129, 0.28);
-            border-radius: 24px;
-            padding: 24px;
-            backdrop-filter: blur(16px);
-            box-shadow: 0 16px 48px rgba(16, 185, 129, 0.1), 0 4px 20px rgba(99, 102, 241, 0.08);
-            position: relative;
-            overflow: hidden;
-            transition: border-color .3s, box-shadow .3s;
-        }
-
-        .pipeline-card:hover {
-            border-color: rgba(99, 102, 241, 0.4);
-            box-shadow: 0 20px 60px rgba(16, 185, 129, 0.14), 0 8px 30px rgba(99, 102, 241, 0.16);
-        }
-
-        .pipeline-bar {
+        .nav-actions {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            padding-bottom: 18px;
-            border-bottom: 1px solid var(--line);
             gap: 12px;
-            flex-wrap: wrap;
         }
 
-        .pipeline-status {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-family: var(--font-mono);
-            font-size: .78rem;
-            font-weight: 600;
-            color: var(--muted);
-            letter-spacing: .04em;
-        }
-
-        .pipeline-pill {
-            padding: 4px 10px;
-            background: rgba(16, 185, 129, 0.12);
-            border: 1px solid rgba(16, 185, 129, 0.3);
-            border-radius: 99px;
-            color: var(--emerald-2);
-            font-weight: 700;
-        }
-
-        .pipeline-actions {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .sim-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 6px 14px;
-            border-radius: 10px;
-            border: 1px solid rgba(99, 102, 241, 0.35);
-            background: rgba(99, 102, 241, 0.08);
-            color: var(--indigo-2);
-            font-family: var(--font-mono);
-            font-size: .75rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all .2s ease;
-        }
-
-        .sim-btn:hover {
-            background: var(--indigo);
-            color: #fff;
-            border-color: var(--indigo);
-            box-shadow: 0 4px 16px var(--indigo-glow);
-            transform: translateY(-1px);
-        }
-
-        /* Pipeline Workflow Stages Grid */
-        .pipeline-flow {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 16px;
-            margin: 22px 0;
-            position: relative;
-        }
-
-        .flow-node {
-            background: rgba(255, 255, 255, 0.82);
-            border: 1.5px solid var(--line);
-            border-radius: 16px;
-            padding: 16px;
-            text-align: left;
-            position: relative;
-            cursor: pointer;
-            transition: all .3s cubic-bezier(.34, 1.56, .64, 1);
-        }
-
-        .flow-node:hover {
-            transform: translateY(-4px);
-            border-color: var(--indigo-light);
-            box-shadow: 0 8px 24px rgba(99, 102, 241, 0.12);
-        }
-
-        .flow-node.active {
-            border-color: var(--emerald);
-            background: #ffffff;
-            box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2), 0 12px 30px rgba(16, 185, 129, 0.14);
-            transform: translateY(-4px);
-        }
-
-        .flow-node.active.stage-indigo {
-            border-color: var(--indigo);
-            box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2), 0 12px 30px rgba(99, 102, 241, 0.16);
-        }
-
-        .node-badge-row {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 8px;
-        }
-
-        .node-step-tag {
-            font-family: var(--font-mono);
-            font-size: .65rem;
-            font-weight: 700;
-            letter-spacing: .08em;
-            color: var(--light);
-        }
-
-        .flow-node.active .node-step-tag {
-            color: var(--emerald-2);
-        }
-
-        .flow-node.active.stage-indigo .node-step-tag {
-            color: var(--indigo);
-        }
-
-        .node-icon-circle {
-            width: 34px;
-            height: 34px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.1rem;
-            background: rgba(16, 185, 129, 0.1);
-            color: var(--emerald-2);
-            transition: all .25s ease;
-        }
-
-        .flow-node.active .node-icon-circle {
-            background: linear-gradient(135deg, var(--emerald), var(--teal));
-            color: #fff;
-            box-shadow: 0 4px 12px var(--emerald-glow);
-        }
-
-        .flow-node.active.stage-indigo .node-icon-circle {
-            background: linear-gradient(135deg, var(--teal), var(--indigo));
-            color: #fff;
-            box-shadow: 0 4px 14px var(--indigo-glow);
-        }
-
-        .flow-node h4 {
-            margin: 4px 0 2px;
-            font-family: var(--font-display);
-            font-size: .98rem;
-            font-weight: 700;
-            letter-spacing: -.015em;
+        .github-btn {
+            border-color: rgba(99, 102, 241, 0.35);
             color: var(--text);
+            background: rgba(255, 255, 255, 0.85);
+            min-height: 48px;
+            padding: 0 20px;
         }
 
-        .flow-node p {
-            margin: 0;
-            font-size: .78rem;
-            color: var(--muted);
-            line-height: 1.45;
+        .github-btn svg {
+            transition: transform .25s ease;
         }
 
-        /* Live Execution Telemetry Bar */
-        .telemetry-box {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 12px 18px;
-            background: #0f172a;
-            border-radius: 12px;
-            color: #e2e8f0;
-            font-family: var(--font-mono);
-            font-size: .8rem;
-            text-align: left;
-            gap: 16px;
-            flex-wrap: wrap;
+        .github-btn:hover {
+            border-color: var(--indigo);
+            color: var(--indigo-2);
+            box-shadow: 0 8px 24px var(--indigo-glow);
         }
 
-        .telemetry-log {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            flex: 1;
-            min-width: 260px;
-        }
-
-        .log-prefix {
-            color: var(--emerald-3);
-            font-weight: 700;
-        }
-
-        .log-text {
-            color: #cbd5e1;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        .telemetry-stats {
-            display: flex;
-            align-items: center;
-            gap: 18px;
-            font-size: .75rem;
-        }
-
-        .telemetry-stats span strong {
-            color: var(--emerald-3);
-        }
-
-        .telemetry-stats span.stat-violet strong {
-            color: #a5b4fc;
+        .github-btn:hover svg {
+            transform: scale(1.1);
         }
 
         /* ── METRICS ───────────────────────────────────────────────── */
@@ -1256,7 +1052,7 @@
         /* ── PROJECTS (BENTO SHOWCASE) ─────────────────────────────── */
         .projects {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 24px;
             margin-top: 50px;
         }
@@ -1326,6 +1122,11 @@
         .project:nth-child(3) .project-mark {
             background: linear-gradient(135deg, var(--indigo), var(--emerald-2));
             box-shadow: 0 6px 18px var(--indigo-glow);
+        }
+
+        .project:nth-child(4) .project-mark {
+            background: linear-gradient(135deg, var(--emerald-2), var(--indigo));
+            box-shadow: 0 6px 18px var(--emerald-glow);
         }
 
         .project-badge {
@@ -1402,6 +1203,10 @@
             color: var(--teal);
         }
 
+        .project:nth-child(4) a {
+            color: var(--indigo);
+        }
+
         .project a:hover {
             gap: 12px;
             transform: translateX(2px);
@@ -1410,6 +1215,150 @@
         .project a::after {
             content: "↗";
             font-size: 1.1rem;
+        }
+
+        .project-actions {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-top: auto;
+            flex-wrap: wrap;
+        }
+
+        .project-actions a {
+            margin-top: 0;
+        }
+
+        .project a.image-action-link {
+            color: var(--teal);
+        }
+
+        .project a.image-action-link:hover {
+            color: var(--emerald-2);
+        }
+
+        /* ── IMAGE MODAL LIGHTBOX ──────────────────────────────────── */
+        .image-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .25s ease;
+        }
+
+        .image-modal.open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .image-modal-backdrop {
+            position: absolute;
+            inset: 0;
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(8px);
+        }
+
+        .image-modal-content {
+            position: relative;
+            background: #ffffff;
+            border-radius: 20px;
+            max-width: 1060px;
+            width: 100%;
+            max-height: 90vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+            z-index: 1;
+            animation: modalPop .28s cubic-bezier(.34, 1.56, .64, 1);
+        }
+
+        @keyframes modalPop {
+            from {
+                transform: scale(0.92);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .image-modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 60px 16px 24px;
+            border-bottom: 1px solid var(--line);
+            gap: 16px;
+            background: #f8fafc;
+        }
+
+        .image-modal-header h3 {
+            margin: 0;
+            font-family: var(--font-display);
+            font-size: 1.05rem;
+            font-weight: 700;
+        }
+
+        .modal-video-link {
+            font-size: .84rem;
+            font-weight: 700;
+            color: var(--indigo);
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .modal-video-link:hover {
+            color: var(--indigo-2);
+            text-decoration: underline;
+        }
+
+        .image-modal-close {
+            position: absolute;
+            top: 12px;
+            right: 18px;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            border: 1px solid var(--line);
+            background: #ffffff;
+            color: var(--text);
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+            transition: all .2s;
+        }
+
+        .image-modal-close:hover {
+            background: #0f172a;
+            color: #fff;
+            transform: scale(1.08);
+        }
+
+        .image-modal-body {
+            padding: 20px;
+            overflow: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f1f5f9;
+        }
+
+        .image-modal-body img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         }
 
         /* ── CONTACT ───────────────────────────────────────────────── */
@@ -1576,10 +1525,6 @@
                 gap: 40px;
             }
 
-            .pipeline-flow {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
             .calculator-layout {
                 grid-template-columns: 1fr;
                 gap: 32px;
@@ -1662,10 +1607,6 @@
                 grid-template-columns: 1fr;
             }
 
-            .pipeline-flow {
-                grid-template-columns: 1fr;
-            }
-
             .calculator-card {
                 padding: 24px 18px;
             }
@@ -1691,11 +1632,6 @@
 
             .metric:last-child {
                 border: 0;
-            }
-
-            .telemetry-box {
-                flex-direction: column;
-                align-items: flex-start;
             }
         }
 
@@ -1744,13 +1680,21 @@
             <div class="nav-links">
                 <a href="#about">About</a>
                 <a href="#services">Services</a>
-                <a href="#pipeline">AI Pipeline</a>
                 <a href="#calculator">ROI Calculator</a>
                 <a href="#stack">Stack</a>
                 <a href="#projects">Projects</a>
                 <a href="#contact">Contact</a>
+                <a href="https://github.com/Wania-irfan-26" target="_blank" rel="noreferrer">GitHub ↗</a>
             </div>
-            <a class="button" href="#contact">Let's Work Together</a>
+            <div class="nav-actions">
+                <a class="button github-btn" href="https://github.com/Wania-irfan-26" target="_blank" rel="noreferrer" aria-label="GitHub Profile">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                    </svg>
+                    <span>GitHub</span>
+                </a>
+                <a class="button" href="#contact">Let's Work Together</a>
+            </div>
         </nav>
     </header>
 
@@ -1791,72 +1735,6 @@
                 <div class="hero-actions">
                     <a class="button primary" href="#projects">Explore Autonomous Projects <span>↓</span></a>
                     <a class="button secondary-glow" href="#contact">Schedule AI Strategy Call <span>→</span></a>
-                </div>
-
-                <!-- ── INTERACTIVE AI AGENT PIPELINE SHOWCASE ────────── -->
-                <div class="pipeline-card" id="pipeline">
-                    <div class="pipeline-bar">
-                        <div class="pipeline-status">
-                            <span class="status-dot"></span>
-                            <span>AGENT_ORCHESTRATOR</span>
-                            <span class="pipeline-pill">AUTOPILOT RUNNING</span>
-                        </div>
-                        <div class="pipeline-actions">
-                            <button class="sim-btn" id="runSimBtn">
-                                <span>⚡</span> Run Live Simulation
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="pipeline-flow" role="region" aria-label="Autonomous AI Pipeline Stages">
-                        <div class="flow-node active" data-step="0">
-                            <div class="node-badge-row">
-                                <span class="node-step-tag">STAGE 01</span>
-                                <span class="node-icon-circle">📥</span>
-                            </div>
-                            <h4>Repeated Trigger</h4>
-                            <p>Emails, CSVs, tickets & customer chats ingested automatically.</p>
-                        </div>
-
-                        <div class="flow-node stage-indigo" data-step="1">
-                            <div class="node-badge-row">
-                                <span class="node-step-tag">STAGE 02</span>
-                                <span class="node-icon-circle">🧠</span>
-                            </div>
-                            <h4>CrewAI Agent Crew</h4>
-                            <p>Multi-agent roleplay: research, critique & decision planning.</p>
-                        </div>
-
-                        <div class="flow-node" data-step="2">
-                            <div class="node-badge-row">
-                                <span class="node-step-tag">STAGE 03</span>
-                                <span class="node-icon-circle">⚡</span>
-                            </div>
-                            <h4>RAG Context Engine</h4>
-                            <p>Vector database search & factual grounding on private data.</p>
-                        </div>
-
-                        <div class="flow-node stage-indigo" data-step="3">
-                            <div class="node-badge-row">
-                                <span class="node-step-tag">STAGE 04</span>
-                                <span class="node-icon-circle">🚀</span>
-                            </div>
-                            <h4>Autonomous Action</h4>
-                            <p>N8N webhook dispatches to CRM, ERP, and databases.</p>
-                        </div>
-                    </div>
-
-                    <div class="telemetry-box">
-                        <div class="telemetry-log">
-                            <span class="log-prefix">LIVE TELEMETRY //</span>
-                            <span class="log-text" id="telemetryLog">Stage 01: Ingesting recurring invoice queries and
-                                lead data streams...</span>
-                        </div>
-                        <div class="telemetry-stats">
-                            <span>Latency: <strong id="telemetryLatency">280ms</strong></span>
-                            <span class="stat-violet">Manual Effort: <strong>0% (Autonomous)</strong></span>
-                        </div>
-                    </div>
                 </div>
 
                 <!-- Metrics Bar -->
@@ -2108,6 +1986,27 @@
                     </div>
                     <a href="#contact">Discuss Custom Deployment</a>
                 </article>
+
+                <article class="project reveal">
+                    <div class="project-top">
+                        <div class="project-mark">V</div>
+                        <span class="project-badge badge-indigo">🎙 Real-Time Voice Agent</span>
+                    </div>
+                    <h3>AI Voice Receptionist</h3>
+                    <p>An autonomous AI receptionist and voice scheduling system built with automated webhook pipelines, real-time Google Calendar slot checking, dynamic routing, and instant appointment booking.</p>
+                    <div class="tags">
+                        <span class="tech-indigo">Voice AI</span>
+                        <span>Make.com</span>
+                        <span class="tech-indigo">Google Calendar API</span>
+                        <span>Webhooks</span>
+                        <span class="tech-indigo">Appointment Booking</span>
+                        <span>Router Logic</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://drive.google.com/file/d/1rOjfHL8ZVaKqSItpBgsu7BOPcKVXKVAm/view?usp=sharing" target="_blank" rel="noreferrer">Watch Demo Video</a>
+                        <a href="ai-receptionist-workflow.png" target="_blank" rel="noreferrer" class="image-action-link open-image-modal">View Workflow Image</a>
+                    </div>
+                </article>
             </div>
         </section>
 
@@ -2134,6 +2033,11 @@
                         <a href="mailto:waniairfan26@gmail.com">waniairfan26@gmail.com</a>
                     </div>
                     <div>
+                        <small>GitHub Profile</small>
+                        <a href="https://github.com/Wania-irfan-26" target="_blank"
+                            rel="noreferrer">github.com/Wania-irfan-26 ↗</a>
+                    </div>
+                    <div>
                         <small>LinkedIn Network</small>
                         <a href="https://www.linkedin.com/in/wania-irfan-167925216/" target="_blank"
                             rel="noreferrer">Wania Irfan ↗</a>
@@ -2149,9 +2053,31 @@
 
     <footer>
         <div class="wrap">
+            <div style="display: flex; justify-content: center; align-items: center; gap: 20px; margin-bottom: 12px; flex-wrap: wrap;">
+                <a href="https://github.com/Wania-irfan-26" target="_blank" rel="noreferrer" style="color: var(--emerald-2); font-weight: 600;">GitHub ↗</a>
+                <span style="opacity: 0.35;">•</span>
+                <a href="https://www.linkedin.com/in/wania-irfan-167925216/" target="_blank" rel="noreferrer" style="color: var(--indigo); font-weight: 600;">LinkedIn ↗</a>
+                <span style="opacity: 0.35;">•</span>
+                <a href="mailto:waniairfan26@gmail.com" style="color: var(--muted); font-weight: 600;">waniairfan26@gmail.com</a>
+            </div>
             © 2026 Wania Irfan · Engineering Autonomous AI Agents & Workflows · Lahore, Pakistan
         </div>
     </footer>
+
+    <!-- ── IMAGE MODAL LIGHTBOX ───────────────────────────────────── -->
+    <div id="imageModal" class="image-modal" aria-hidden="true" role="dialog" aria-label="Workflow Architecture Diagram">
+        <div class="image-modal-backdrop" id="modalBackdrop"></div>
+        <div class="image-modal-content">
+            <button class="image-modal-close" id="modalCloseBtn" aria-label="Close modal">✕</button>
+            <div class="image-modal-header">
+                <h3>AI Receptionist — Workflow Architecture</h3>
+                <a href="https://drive.google.com/file/d/1rOjfHL8ZVaKqSItpBgsu7BOPcKVXKVAm/view?usp=sharing" target="_blank" rel="noreferrer" class="modal-video-link">Watch Demo Video ↗</a>
+            </div>
+            <div class="image-modal-body">
+                <img src="ai-receptionist-workflow.png" alt="AI Receptionist Automation Workflow Architecture" />
+            </div>
+        </div>
+    </div>
 
     <!-- ── JAVASCRIPT LOGIC ──────────────────────────────────────── -->
     <script>
@@ -2198,93 +2124,7 @@
             });
         });
 
-        // 4. Interactive AI Pipeline Simulation
-        const pipelineStages = [
-            {
-                step: 0,
-                log: "Stage 01: Ingesting recurring invoice queries and lead data streams...",
-                latency: "140ms"
-            },
-            {
-                step: 1,
-                log: "Stage 02: CrewAI agents collaborating: Research Agent debating with Verifier...",
-                latency: "310ms"
-            },
-            {
-                step: 2,
-                log: "Stage 03: RAG Engine queried ChromaDB vector store; grounded on private company docs...",
-                latency: "220ms"
-            },
-            {
-                step: 3,
-                log: "Stage 04: N8N dispatching authenticated webhooks: CRM updated, report emailed!",
-                latency: "180ms"
-            }
-        ];
-
-        let currentStageIndex = 0;
-        let isSimRunning = false;
-        const flowNodes = document.querySelectorAll('.flow-node');
-        const telemetryLog = document.getElementById('telemetryLog');
-        const telemetryLatency = document.getElementById('telemetryLatency');
-        const runSimBtn = document.getElementById('runSimBtn');
-
-        function setPipelineStage(index) {
-            currentStageIndex = index;
-            flowNodes.forEach((node, i) => {
-                node.classList.toggle('active', i === index);
-            });
-            if (telemetryLog) {
-                telemetryLog.textContent = pipelineStages[index].log;
-            }
-            if (telemetryLatency) {
-                telemetryLatency.textContent = pipelineStages[index].latency;
-            }
-        }
-
-        flowNodes.forEach((node, i) => {
-            node.addEventListener('click', () => {
-                setPipelineStage(i);
-            });
-        });
-
-        // Run live simulation loop
-        function triggerSimulation() {
-            if (isSimRunning) return;
-            isSimRunning = true;
-            if (runSimBtn) {
-                runSimBtn.innerHTML = '<span>⏳</span> Simulating...';
-                runSimBtn.style.opacity = '0.7';
-            }
-
-            let step = 0;
-            const simInterval = setInterval(() => {
-                setPipelineStage(step);
-                step++;
-                if (step >= pipelineStages.length) {
-                    clearInterval(simInterval);
-                    setTimeout(() => {
-                        isSimRunning = false;
-                        if (runSimBtn) {
-                            runSimBtn.innerHTML = '<span>⚡</span> Run Live Simulation';
-                            runSimBtn.style.opacity = '1';
-                        }
-                    }, 1200);
-                }
-            }, 1000);
-        }
-
-        runSimBtn?.addEventListener('click', triggerSimulation);
-
-        // Auto gentle cycle when idle
-        let autoCycle = setInterval(() => {
-            if (!isSimRunning) {
-                const next = (currentStageIndex + 1) % pipelineStages.length;
-                setPipelineStage(next);
-            }
-        }, 3600);
-
-        // 5. Interactive ROI Calculator Logic
+        // 4. Interactive ROI Calculator Logic
         const hoursSlider = document.getElementById('hoursSlider');
         const hoursDisplay = document.getElementById('hoursDisplay');
         const annualHoursVal = document.getElementById('annualHoursVal');
@@ -2308,7 +2148,7 @@
 
         hoursSlider?.addEventListener('input', updateRoiCalculator);
 
-        // 6. One-click copy email button
+        // 5. One-click copy email button
         const copyEmailBtn = document.getElementById('copyEmailBtn');
         const copyText = document.getElementById('copyText');
         const copyIcon = document.getElementById('copyIcon');
@@ -2326,7 +2166,7 @@
             });
         });
 
-        // 7. Scroll Reveal Animation
+        // 6. Scroll Reveal Animation
         const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
         const revealObserver = new IntersectionObserver(entries => {
             entries.forEach(entry => {
@@ -2345,7 +2185,7 @@
             }
         });
 
-        // 8. Animated Metrics Counter
+        // 7. Animated Metrics Counter
         if (!reducedMotion) {
             const metricObserver = new IntersectionObserver(entries => {
                 entries.forEach(entry => {
@@ -2372,7 +2212,7 @@
             if (metricsSection) metricObserver.observe(metricsSection);
         }
 
-        // 9. Active Navigation Indicator based on visible section
+        // 8. Active Navigation Indicator based on visible section
         const sections = [...document.querySelectorAll('main section[id]')];
         const links = [...document.querySelectorAll('.nav-links a')];
         const sectionObserver = new IntersectionObserver(entries => {
@@ -2386,7 +2226,7 @@
         }, { rootMargin: '-35% 0px -55%' });
         sections.forEach(section => sectionObserver.observe(section));
 
-        // 10. Neural Constellation Canvas (Lightweight, Hardware Accelerated)
+        // 9. Neural Constellation Canvas (Lightweight, Hardware Accelerated)
         (function initNeuralCanvas() {
             if (reducedMotion) return;
             const canvas = document.getElementById('neuralCanvas');
@@ -2478,6 +2318,34 @@
             }
             animate();
         })();
+
+        // 10. Image Lightbox Modal for AI Receptionist Workflow
+        const imageModal = document.getElementById('imageModal');
+        const modalBackdrop = document.getElementById('modalBackdrop');
+        const modalCloseBtn = document.getElementById('modalCloseBtn');
+        const openModalTriggers = document.querySelectorAll('.open-image-modal');
+
+        function openModal(e) {
+            if (e) e.preventDefault();
+            imageModal?.classList.add('open');
+            imageModal?.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            imageModal?.classList.remove('open');
+            imageModal?.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+
+        openModalTriggers.forEach(el => el.addEventListener('click', openModal));
+        modalCloseBtn?.addEventListener('click', closeModal);
+        modalBackdrop?.addEventListener('click', closeModal);
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && imageModal?.classList.contains('open')) {
+                closeModal();
+            }
+        });
     </script>
 </body>
 
